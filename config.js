@@ -8,7 +8,7 @@ import axios from 'axios'
 
 global.owner = [
   ['918822912149', 'Ritam Senpai', true],
-  [''] 
+  
 ] //Number of owners
 
 global.pairingNumber = "14404905478" 
@@ -24,7 +24,7 @@ global.keysneoxrrr = ['5VC9rvNx', 'cfALv5']
 global.keysneoxr = keysneoxrrr[Math.floor(keysneoxrrr.length * Math.random())]
 global.lolkeysapi = ['GataDios']
 
-global.APIs = { .
+global.APIs = { 
   // name: 'https://website'
   xteam: 'https://api.xteam.xyz', 
   dzx: 'https://api.dhamzxploit.my.id',
