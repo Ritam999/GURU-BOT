@@ -73,4 +73,48 @@ watchFile(file, () => {
   unwatchFile(file)
   console.log(chalk.redBright("Update 'config.js'"))
   import(`${file}?update=${Date.now()}`)
+  // ... (Your existing code)
+
+// Define a global object to store last command timestamps
+global.commandCooldowns = {};
+
+// Function to check if a command is on cooldown
+function isCommandOnCooldown(command, userId) {
+  const key = `${command}_${userId}`;
+  const cooldownTimeInSeconds = 5; // Set your desired cooldown time in seconds
+
+  if (global.commandCooldowns[key]) {
+    const currentTime = Date.now();
+    const cooldownExpiration = global.commandCooldowns[key] + cooldownTimeInSeconds * 1000;
+
+    return currentTime < cooldownExpiration;
+  }
+
+  return false;
+}
+
+// Function to set a cooldown for a command
+function setCommandCooldown(command, userId) {
+  const key = `${command}_${userId}`;
+  global.commandCooldowns[key] = Date.now();
+}
+
+// Example of using the cooldown mechanism in your bot logic
+// Replace this with your actual bot command handling logic
+function handleBotCommand(command, userId) {
+  if (isCommandOnCooldown(command, userId)) {
+    console.log('Command is on cooldown. Please wait.');
+  } else {
+    // Your command logic here
+    console.log(`Executing command: ${command}`);
+
+    // Set cooldown for the command
+    setCommandCooldown(command, userId);
+  }
+}
+
+// Example usage:
+const userId = '123456789';
+const command = 'yourBotCommand';
+handleBotCommand(command, userId);
 })
