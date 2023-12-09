@@ -7,9 +7,8 @@ import axios from 'axios'
 
 
 global.owner = [
-  ['918822912149', 'Ritam Senpai', true],
-  
-] //Number of owners
+  ['918822912149','Ritam Senpai', true],
+  ] 
 
 global.pairingNumber = "14404905478" 
 
@@ -53,12 +52,8 @@ global.botname = 'Gojo Satoru'
 global.premium = 'true'
 global.packname = 'Ri' 
 global.author = '@ri' 
-global.menuvid = 'https://telegra.ph/file/085c4b1068f0f4f8db970.mp4'
-global.igfg = '▢ Follow on Instagram\nhttps://www.instagram.com/asli_guru69\n' 
-global.dygp = 'https://chat.whatsapp.com/BibVE6tUICp3qOm2a1Ur8f'
-global.fgsc = 'https://github.com/Guru322/GURU-BOT' 
-global.fgyt = 'https://youtube.com/@Asliguru'
-global.fgpyp = 'https://youtube.com/@Asliguru'
+global.menuvid = 'https://youtu.be/7e95JyEkkEY?si=_9_c021qmHUs1WgJ'
+global.igfg = 'https://www.instagram.com/debanilritamborgohain/\n' 
 global.fglog = 'https://raw.githubusercontent.com/Guru322/api/Guru/guru.jpg' 
 global.thumb = fs.readFileSync('./Assets/Gurulogo.jpg')
 
